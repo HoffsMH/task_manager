@@ -7,8 +7,8 @@ class TaskManagerApp < Sinatra::Base
   end
 
   get '/tasks' do
-    @task = TaskManager.all
-      erb :index
+    @tasks = TaskManager.all
+    erb :index
   end
 
   get '/tasks/new' do
